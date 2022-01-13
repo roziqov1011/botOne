@@ -9,7 +9,7 @@ const CronJob = require('cron').CronJob;
 const job = new CronJob('0/5 * * * * *', function() {
   console.log('You will see this message every second');
   chatIds.forEach((chatId) => {
-      bot.sendMessage(chatId, `${hours}-${minutes}`)
+      bot.sendMessage(chatId, `${hours+5}-${minutes}`)
   })
 }, null, true);
 
