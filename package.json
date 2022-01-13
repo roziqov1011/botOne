@@ -1,0 +1,20 @@
+{
+  "name": "telegrambot",
+  "version": "1.0.0",
+  "description": "bu bizning birichi botimiz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "super",
+    "demo",
+    "bot"
+  ],
+  "author": "Roziqov",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^1.8.2",
+    "telebot": "^1.4.1"
+  }
+}
