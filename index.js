@@ -3,7 +3,7 @@ const TeleBot = require('telebot');
 const bot = new TeleBot(TELEGRAM_BOT_TOKEN);
 const chatIds = [];
 const CronJob = require('cron').CronJob;
-const job = new CronJob('0/60 * * * * *', function() {
+const job = new CronJob('0/5 * * * * *', function() {
   console.log('You will see this message every second');
   chatIds.forEach((chatId) => {
       bot.sendMessage(chatId, 'Salom')
