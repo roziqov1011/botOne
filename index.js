@@ -14,7 +14,7 @@ const job = new CronJob('0/5 * * * * *', function() {
 
 bot.on('text', (msg) => {
     if(msg.text == 'assalomu alekum' || msg.text == 'salom'){
-        msg.reply.text(' kelgan habar :'+msg.text)
+        msg.reply.text(' assalomu alekum ')
     }
 });
 bot.on(['/start'], (msg) =>{
