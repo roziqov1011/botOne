@@ -7,13 +7,16 @@ let hours = date.getHours();
 let minutes = date.getMinutes();
 const CronJob = require('cron').CronJob;
 const job = new CronJob('0/5 * * * * *', function() {
-  console.log('You will see this message every second');
   chatIds.forEach((chatId) => {
       bot.sendMessage(chatId, `${hours+5}-${minutes}`)
   })
 }, null, true);
 
-bot.on('text', (msg) => msg.reply.text(' kelgan habar :'+msg.text));
+bot.on('text', (msg) => {
+    if(msg.text == 'assalomu alekum' || msg.text == 'salom'){
+        msg.reply.text(' kelgan habar :'+msg.text)
+    }
+});
 bot.on(['/start'], (msg) =>{
     console.log(msg.text);
     let chatId = msg.chat.id;
