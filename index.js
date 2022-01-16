@@ -13,8 +13,8 @@ const job = new CronJob('0/5 * * * * *', function() {
 }, null, true);
 
 bot.on('text', (msg) => {
-    let massage = msg.text.toLowercase()
-    if(massage == 'assalomu alekum' || msg.text == 'salom'){
+    let massage = msg.text.toLowerCase();
+    if(massage == 'assalomu alekum' || msg.text == 'salom' || msg.text == 'qale'){
         msg.reply.text(' assalomu alekum ')
     }
 });
